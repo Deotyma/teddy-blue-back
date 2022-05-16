@@ -16,14 +16,14 @@ const UserSchema = new mongoose.Schema(
       type: [String],
     },
 
-    messages_id{
-        type: [String], 
+    message_id: {
+        type: [String],
     },
 
     city: {
-        type: String,
-        required: true,
-    },
+      type: String,
+      required: true,
+    },  
 
     password: {
       type: String,
