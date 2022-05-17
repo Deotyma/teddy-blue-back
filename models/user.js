@@ -16,10 +16,6 @@ const UserSchema = new mongoose.Schema(
       type: [String],
     },
 
-    message_id: {
-        type: [String],
-    },
-
     city: {
       type: String,
       required: true,
