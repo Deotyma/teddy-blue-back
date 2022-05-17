@@ -23,6 +23,11 @@ const ItemSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  exchange: {
+    type: Boolean,
+    default: false,
+  },
+  
   price: {
     type: Number,
     required: true,
