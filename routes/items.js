@@ -16,5 +16,4 @@ router.delete("/:id", deleteItem);
 router.get("/:id", getItemById)
 router.get("/", getAllItems)
 
-
 export default router
