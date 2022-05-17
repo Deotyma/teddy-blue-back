@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
-const ItemSchema = new mongoose.Schema({
+const ItemSchema = new mongoose.Schema(
+    {
   title: {
     type: String,
     required: true,
@@ -27,7 +28,6 @@ const ItemSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
-  
   price: {
     type: Number,
     required: true,
@@ -38,11 +38,8 @@ const ItemSchema = new mongoose.Schema({
     required: true,
   },
 
-  creationDate:{
-    type: Date,
-    required: true, 
-  }
-
-});
+},
+  { timestamps: true }
+);
 
 export default mongoose.model("Item", ItemSchema)

@@ -15,6 +15,9 @@ app.get('/', (req, res, next)=> {
 })
 
 //middlewares
+
+app.use(express.json())
+
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/items", itemsRoute);
 app.use("/api/v1/users", usersRoute);
