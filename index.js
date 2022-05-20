@@ -5,6 +5,7 @@ import authRoute from "./routes/auth.js";
 import itemsRoute from "./routes/items.js";
 import usersRoute from "./routes/users.js";
 import messagesRoute from "./routes/messages.js";
+import cookieParser from "cookie-parser";
 
 const port = parseInt(process.env.PORT, 10) || 5000;
 const app = express()
@@ -15,8 +16,8 @@ app.get('/', (req, res, next)=> {
 })
 
 //middlewares
-
-app.use(express.json())
+app.use(cookieParser());
+app.use(express.json());
 
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/items", itemsRoute);
